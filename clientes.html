@@ -47,22 +47,19 @@
         <tbody id="tableBody">
             <tr>
                 <td>Alejo Acevedo</td>
-                <td>alejo@corre.com</td>
+                <td>alejo@correo.com</td>
                 <td>24</td>
                 <td>
-                    <button type="button" class="btn btn-warning" data-bs-toggle="modal"
-                        data-bs-target="#modal">Detalles</button>
+                    <button type="button" class="btn btn-warning btn-details-client" data-bs-toggle="modal"
+                        data-bs-target="#modal" onclick="detailsClient()">Detalles</button>
                 </td>
             </tr>
         </tbody>
     </table>
 
-    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Agregar Cliente</button>
-
-
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
-        Launch demo modal
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal" onclick="saveClient()">
+        Agregar cliente
     </button>
 
     <!-- Modal -->
@@ -76,8 +73,8 @@
                 <div class="modal-body">
                     <div>
                         <div class="form-grup mb-3">
-                            <label for="txtId"><b>ID: </b></label>
-                            <input class="form-control" id="txtId" type="number" placeholder="Ingrese ID" />
+                            <label for="inputId"><b>ID: </b></label>
+                            <input class="form-control" id="inputId" type="number" placeholder="Ingrese ID" />
                         </div>
                         <div class="form-grup mb-3">
                             <label for="inputName"><b>Nombre: </b></label>
@@ -88,21 +85,21 @@
                             <input class="form-control" id="inputEmail" type="text" placeholder="Ingrese correo" />
                         </div>
                         <div class="form-grup mb-3">
-                            <label for="InputPass"><b>Contrase&ntildea: </b></label>
-                            <input class="form-control" id="InputPass" type="password"
+                            <label for="inputPass"><b>Contrase&ntildea: </b></label>
+                            <input class="form-control" id="inputPass" type="password"
                                 placeholder="Ingrese contraseña" />
                         </div>
                         <div class="form-grup mb-3">
-                            <label for="InputAge"><b>Edad: </b></label>
-                            <input class="form-control" id="InputAge" type="number" placeholder="Ingrese edad" />
+                            <label for="inputAge"><b>Edad: </b></label>
+                            <input class="form-control" id="inputAge" type="number" placeholder="Ingrese edad" />
                         </div>
 
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Crear</button>
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Eliminar</button>
-                    <button type="button" class="btn btn-primary">Actualizar</button>
+                    <button type="button" class="btn btn-success btn-agregar" data-bs-dismiss="modal">Crear</button>
+                    <button type="button" class="btn btn-danger btn-agregar" data-bs-dismiss="modal">Eliminar</button>
+                    <button type="button" class="btn btn-primary btn-actualizar">Actualizar</button>
                 </div>
             </div>
         </div>
