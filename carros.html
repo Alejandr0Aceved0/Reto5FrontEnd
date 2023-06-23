@@ -1,12 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARROS</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clientes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
 </head>
+
 <body>
-    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Carros</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="./home.html">Home</a></li>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="./gamas.html">Gamas</a></li>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="./mensajes.html">Mensajes</a></li>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="./reservas.html">Reservas</a></li>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="./score.html">Puntajes</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="text-center" style="margin-bottom: 20px">Lista de clientes</h1>
+
+    <table class="table text-center">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Edad</th>
+                <th>Detalles</th>
+            </tr>
+        </thead>
+
+        <tbody id="tableBody">
+            <tr>
+                <td>Alejo Acevedo</td>
+                <td>alejo@correo.com</td>
+                <td>24</td>
+                <td>
+                    <button type="button" class="btn btn-warning btn-details-client" data-bs-toggle="modal"
+                        data-bs-target="#modal" onclick="detailsClient()">Detalles</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" style="margin-inline: 20px" data-bs-toggle="modal" data-bs-target="#modal" onclick="saveClient()">
+        Agregar cliente
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Formulario clientes</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="form-grup mb-3">
+                            <label for="inputId"><b>ID: </b></label>
+                            <input class="form-control" id="inputId" type="number" placeholder="Ingrese ID" />
+                        </div>
+                        <div class="form-grup mb-3">
+                            <label for="inputName"><b>Nombre: </b></label>
+                            <input class="form-control" id="inputName" type="text" placeholder="Ingrese nombre" />
+                        </div>
+                        <div class="form-grup mb-3">
+                            <label for="inputEmail"><b>Correo: </b></label>
+                            <input class="form-control" id="inputEmail" type="text" placeholder="Ingrese correo" />
+                        </div>
+                        <div class="form-grup mb-3">
+                            <label for="inputPass"><b>Contrase&ntildea: </b></label>
+                            <input class="form-control" id="inputPass" type="password"
+                                placeholder="Ingrese contraseña" />
+                        </div>
+                        <div class="form-grup mb-3">
+                            <label for="inputAge"><b>Edad: </b></label>
+                            <input class="form-control" id="inputAge" type="number" placeholder="Ingrese edad" />
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success btn-agregar" data-bs-dismiss="modal">Crear</button>
+                    <button type="button" class="btn btn-danger btn-agregar" data-bs-dismiss="modal">Eliminar</button>
+                    <button type="button" class="btn btn-primary btn-actualizar">Actualizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="./script/clientes.js"></script>
 </body>
+
 </html>

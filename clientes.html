@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Clientes</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,7 +22,6 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"> <a class="nav-link active" aria-current="page" href="./home.html">Home</a></li>
                     <li class="nav-item"> <a class="nav-link active" aria-current="page" href="./carros.html">Carros</a></li>
-                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="./clientes.html">Clientes</a></li>
                     <li class="nav-item"> <a class="nav-link active" aria-current="page" href="./gamas.html">Gamas</a></li>
                     <li class="nav-item"> <a class="nav-link active" aria-current="page" href="./mensajes.html">Mensajes</a></li>
                     <li class="nav-item"> <a class="nav-link active" aria-current="page" href="./reservas.html">Reservas</a></li>
@@ -58,7 +57,7 @@
     </table>
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal" onclick="saveClient()">
+    <button type="button" class="btn btn-primary" style="margin-inline: 20px" data-bs-toggle="modal" data-bs-target="#modal" onclick="saveClient()">
         Agregar cliente
     </button>
 
@@ -97,8 +96,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success btn-agregar" data-bs-dismiss="modal">Crear</button>
-                    <button type="button" class="btn btn-danger btn-agregar" data-bs-dismiss="modal">Eliminar</button>
+                    <button type="button" class="btn btn-success btn-agregar">Crear</button>
+                    <button type="button" class="btn btn-danger btn-eliminar">Eliminar</button>
                     <button type="button" class="btn btn-primary btn-actualizar">Actualizar</button>
                 </div>
             </div>
