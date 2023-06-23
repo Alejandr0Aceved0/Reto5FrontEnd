@@ -20,7 +20,7 @@ function saveClient() {
 
 function detailsClient() {
     btnAgregar[0].style.display = 'none'
-    btnAgregar[1].style.display = 'none'
+    btnEliminar[0].style.display = 'block'
     btnModalActualizar[0].style.display = 'block'
 }
 
@@ -43,7 +43,7 @@ function create() {
         redirect: 'follow'
     };
 
-    fetch("localhost:8080/api/Client/save", requestOptions)
+    fetch("localhost:80/api/Client/save", requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
@@ -56,20 +56,40 @@ function getAll() {
         redirect: 'follow'
       };
       
-      fetch("localhost:8080/api/Client/all", requestOptions)
+      fetch("http://localhost:80/api/Client/all", requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
 }
 
 function getById() {
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+      
+      fetch("localhost:80/api/Client/"+inputId, requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
 
 }
 
 function deleteById() {
-
+    var requestOptions = {
+        method: 'DELETE',
+        redirect: 'follow'
+      };
+      
+      fetch("localhost:80/api/Client/1", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
 }
 
 function updateById() {
 
 }
+
+
+getAll()
